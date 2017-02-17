@@ -50,7 +50,19 @@
 
 `docker-compose up`
 
+`docker-compose up -d # Run in the background.`
+
+`docker-compose up --force-recreate # Force recreate containers` ([be aware](https://github.com/docker/compose/issues/2127))
+
+`docker-compose up --build # Force build images on start.`
+
+`docker-compose -f docker-compose.dev.yml up`
+
+`docker-compose -f docker-compose.yml -f docker-compose.dev.yml up # Extend docker-compose.yml configuration file.`
+
 `docker-compose build # Create or rebuild services.`
+
+`docker-compose pull # Pull the latest image(s) version.`
 
 `docker-compose run web # Start a specific docker-compose service.`
 
@@ -60,11 +72,9 @@
 
 `docker-compose --service-ports run web npm start # Run command with the service's ports enabled and mapped to the host.`
 
-`docker-compose -f docker-compose.dev.yml up`
+`docker-compose stop # Stop docker containers`
 
-`docker-compose -f docker-compose.yml -f docker-compose.dev.yml up # Extend docker-compose.yml configuration file.`
-
-`docker-compose up -d # Run in the background.`
+`docker-compose rm -f # Remove containers`
 
 ## Example Docker setups
 
